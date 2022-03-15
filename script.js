@@ -31,15 +31,17 @@ function mostraform(){
 }
 
 
-// /*********************** deletar table *****************************/
-// const delet = document.querySelectorAll('.deletar-box')
 
-// function deletarform() {
-// let deletar = document.querySelectorAll('.table-js')
-//  delet.removeChild(deletar)
-// }
 
-// delet.addEventListener('click' , deletarform)
+/***************************************** */
+const reset = document.getElementById('btn-js')
+
+function resteForm() {
+ let dele = document.querySelector('.itemDelet')
+ dele.remove('.itemDelet')
+}
+
+reset.addEventListener('click' , resteForm)
 
 
 
