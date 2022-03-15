@@ -1,27 +1,45 @@
-const btn = document.querySelector('a')
+function mostraform(){
+    let name = document.getElementById('name')
+    let username = document.getElementById('username')
 
-function mostarform(e){
-  e.preventDefault();
-let nome = document.querySelector('[data-nome="nome"]')
-let senha = document.querySelector('[data-senha="senha"]')
+    let newTr = document.createElement('tr')
 
-document.getElementById('valorNome').innerHTML = nome.value;
-document.getElementById('valorSenha').innerText = senha.value;
+    let tbody = document.getElementById('tbody')
+    tbody.append(newTr)
 
+    let newTd = document.createElement('td')
+    newTd.classList.add('valueName')
+
+    let tr = newTr
+    tr.append(newTd)
+    
+    let secondTd = document.createElement('td')
+    secondTd.classList.add('valueUsername')
+   
+    tr.append(secondTd)
+
+    let thirdTd = document.createElement('td')
+    tr.append(thirdTd)
+
+    let buttonTd = document.createElement('button')
+    buttonTd.innerHTML = 'Delete'
+    
+    thirdTd.append(buttonTd)
+
+    document.querySelector('.valueName').innerHTML = name.value
+    document.querySelector('.valueUsername').innerHTML = username.value
 }
 
-btn.addEventListener('click', mostarform)
 
+// /*********************** deletar table *****************************/
+// const delet = document.querySelectorAll('.deletar-box')
 
-/*********************** deletar table *****************************/
-const delet = document.querySelectorAll('.deletar-box')
+// function deletarform() {
+// let deletar = document.querySelectorAll('.table-js')
+//  delet.removeChild(deletar)
+// }
 
-function deletarform() {
-let deletar = document.querySelectorAll('.table-js')
- delet.removeChild(deletar)
-}
-
-delet.addEventListener('click' , deletarform)
+// delet.addEventListener('click' , deletarform)
 
 
 

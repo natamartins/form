@@ -14,15 +14,15 @@
     <h2>Login</h2>
     <form>
       <div class="user-box">
-        <input type="text" data-nome="nome" id="value">
-        <label>Usuario</label>
+        <input type="text" id="name" value="">
+        <label>Name</label>
       </div>
       <div class="user-box">
-        <input type="password" data-senha="senha" id="value">
-        <label>senha</label>
+        <input type="text" id="username" value="">
+        <label>Username</label>
       </div>
 
-      <a href="#" class="btn">
+      <a href="#" class="btn" onclick="mostraform()">
         <span></span>
         <span></span>
         <span></span>
@@ -37,34 +37,20 @@
       <table>
         <thead>
           <tr>
-            <th>ID</th>
             <th>Name</th>
             <th>Username</th>
             <th>Actions</th>
           </tr>
         </thead>
-        <tbody>
+        <tbody id="tbody">
           <tr>
-            <td>0</td>
-            <td>Frank</td>
-            <td>Frank Degrassi</td>
-            <td><button>Delete</button></td>
-          </tr>
-          <tr>
-            <td>1</td>
-            <td>Birgit</td>
-            <td>Birgit Boswald</td>
+            <td>Joao</td>
+            <td>JoaoGamer</td>
             <td><button>Delete</button></td>
           </tr>
         </tbody>
       </table>
     </div>
-
-    <!--------------------- table 02 ----------------------------->
-
-
-    <!--------------------- table 03 ----------------------------->
-
   </div>
   <script src="./script.js"></script>
 </body>
