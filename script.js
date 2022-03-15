@@ -1,47 +1,48 @@
 function mostraform(){
     let name = document.getElementById('name')
     let username = document.getElementById('username')
+    let password = createRandomString()
 
     let newTr = document.createElement('tr')
+    newTr.id = password
 
     let tbody = document.getElementById('tbody')
     tbody.append(newTr)
 
     let newTd = document.createElement('td')
     newTd.classList.add('valueName')
+    newTd.innerHTML = name.value
 
-    let tr = newTr
-    tr.append(newTd)
+    // let tr = newTr
+    newTr.append(newTd)
     
     let secondTd = document.createElement('td')
     secondTd.classList.add('valueUsername')
-   
-    tr.append(secondTd)
+    secondTd.innerHTML = username.value
+    
+    newTr.append(secondTd)
 
     let thirdTd = document.createElement('td')
-    tr.append(thirdTd)
+    newTr.append(thirdTd)
 
     let buttonTd = document.createElement('button')
+    buttonTd.id = password + "-btn"
     buttonTd.innerHTML = 'Delete'
     
+    buttonTd.onclick = () => resteForm(newTr)
+
     thirdTd.append(buttonTd)
 
-    document.querySelector('.valueName').innerHTML = name.value
-    document.querySelector('.valueUsername').innerHTML = username.value
+    name.value = null
+    username.value = null
 }
 
-
+function createRandomString(){
+   return Math.random().toString(36).replace(/[^a-z]+/g, '').substr(0, 5);
+}
 
 
 /***************************************** */
-const reset = document.getElementById('btn-js')
-
-function resteForm() {
- let dele = document.querySelector('.itemDelet')
- dele.remove('.itemDelet')
+function resteForm(line) {
+    line.remove()
 }
-
-reset.addEventListener('click' , resteForm)
-
-
-
